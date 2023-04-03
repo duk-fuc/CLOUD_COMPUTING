@@ -1,0 +1,40 @@
+
+<?php
+require_once "../controller/Option_Control.php";
+$temp  =new  Option_Control();
+if(isset($_POST['act'])){
+    $temp -> ChangeBillingInformation();
+}
+$data = $temp->GetBillingInformation();
+?>
+<div style="padding-left: 15px; padding-top: 10px; padding-right: 15px">
+    <h4>Payment information settings</h4>
+    <br>
+    <form method="post">
+        <h5>Bank payment information</h5>
+        <div class="form-group">
+            <label  for="exampleInputEmail1">Bank name</label><br>
+            <input type="text" class="form-control-sm" style="width: 400px; max-width: 90%" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $data->bankname?>" required name="bankname">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Account number</label><br>
+            <input type="text" class="form-control-sm" style="width: 400px; max-width: 90%" id="exampleInputPassword1"  value="<?php echo $data->stk?>" name="stk" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Account holder</label><br>
+            <input type="text" class="form-control-sm" style="width: 400px; max-width: 90%" id="exampleInputPassword1" value="<?php echo $data->ctkbank?>" name="ctkbank" required>
+        </div>
+        <br>
+        <h5>Momo payment information</h5>
+        <div class="form-group">
+            <label  for="exampleInputEmail1">Phone number</label><br>
+            <input type="text" class="form-control-sm" style="width: 400px; max-width: 90%" id="exampleInputEmail1" aria-describedby="emailHelp" required value="<?php echo $data->sdt?>" name="sdt">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Account holder</label><br>
+            <input type="text" class="form-control-sm" style="width: 400px; max-width: 90%" id="exampleInputPassword1" value="<?php echo $data->ctkmomo?>" name="ctkmomo" required>
+        </div>
+        <button type="submit" class="btn btn-info" name="act">Change</button>
+
+    </form>
+</div>

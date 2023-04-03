@@ -1,0 +1,23 @@
+<h4 style="margin-top: 10px; width: 100%; text-align: center">ACCOUNT</h4>
+<hr />
+<a href="./account.php"><h5 class="h5-menu-ac">Account information</h5></a>
+<hr />
+<a href="./changethepassword.php"
+  ><h5 class="h5-menu-ac">Change the password</h5></a
+>
+<hr />
+<a href="./addressbook.php"><h5 class="h5-menu-ac">Address</h5></a>
+<hr />
+<a href="./cart.php"><h5 class="h5-menu-ac">Shopping cart</h5></a>
+<hr />
+<a href="./purchasestatus.php"><h5 class="h5-menu-ac">My order</h5></a>
+<hr />
+<a href="./purchasehistory.php"><h5 class="h5-menu-ac">Purchase history</h5></a>
+<hr />
+<h5 class="logout" onclick="logout()">Sign out</h5>
+<script>
+  function logout() {
+    document.cookie = "login=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    window.location = "./";
+  }
+</script>
