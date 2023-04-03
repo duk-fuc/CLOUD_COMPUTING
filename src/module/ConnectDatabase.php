@@ -7,9 +7,9 @@ class ConnectDatabase {
     private $dbname;
 
     function __construct() {
-        $this->servername = "localhost";
-        $this->username = "root";
-        $this->password = "";
+        $this->servername = "db";
+        $this->username = "phuctd";
+        $this->password = "tranducphuc2003";
         $this->dbname = "chuongmobile";
     }
     function connect() {
