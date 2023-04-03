@@ -16,4 +16,4 @@ services:
       MYSQL_DATABASE: chuongmobile
       MYSQL_USER: phuctd
       MYSQL_PASSWORD: tranducphuc2003
-      MYSQL_ROOT_PASSWORD: tranducphuc2003
+      MYSQL_ROOT_PASSWORD: 123@123Aa
