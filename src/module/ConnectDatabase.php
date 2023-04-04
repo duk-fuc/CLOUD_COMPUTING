@@ -10,7 +10,7 @@ class ConnectDatabase {
         $this->servername = "db";
         $this->username = "phuctd";
         $this->password = "tranducphuc2003";
-        $this->dbname = "chuongmobile";
+        $this->dbname = "toystore";
     }
     function connect() {
         $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
