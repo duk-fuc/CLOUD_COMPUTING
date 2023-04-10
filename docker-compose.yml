@@ -2,18 +2,30 @@ version: '3'
 services:
   web:
     image: php:7.4-apache
+    container_name: web
     ports:
-      - "88:80"
+      - "80:80"
     volumes:
       - ./src:/var/www/html
     depends_on:
       - db
   db:
     image: mysql:5.7
+    container_name: db
     volumes:
       - ./data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: toystore
       MYSQL_USER: phuctd
       MYSQL_PASSWORD: tranducphuc2003
-      MYSQL_ROOT_PASSWORD: 123@123Aa
+      MYSQL_ROOT_PASSWORD: Tranducphuc2003
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - '8080:80'
+    restart: always
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
